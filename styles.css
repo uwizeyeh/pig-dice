@@ -1,0 +1,94 @@
+/** body and summarized styling**/
+body{
+    margin-top: 32px;
+    background-color: #bb7d6d;
+  }
+  .players-reg, .game-section, .results-screen,.wingame,.gamestats {
+    display: none;
+  }
+  .btn-danger {
+    margin-top: 10px;
+    background-color: #B71427;
+  }
+  .button-disable {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: .65;
+    pointer-events: none;
+  }
+  
+  .panel-disable {
+    color: white;
+    background-color: grey;
+    opacity: .9;
+  }
+  
+  /** header **/
+  .head {
+    margin-bottom: 100px;
+    color: white;
+    background-color:  #B71427;
+    
+  }
+  .navbar{
+    background-color:  #B71427;
+  }
+  
+  /** section initial screen **/
+  .dice-image {
+    float: right;
+    margin-top: 25px;  
+    border: 1px black solid;
+  }
+  
+  /** section game reg **/
+  
+  
+  /** section game screen **/
+  #panel-p2, #panel-p1 {
+    height: 350px;
+    color: white;
+  }
+  .player1-level{
+    font-size: 18px;
+    color: white;
+  }
+  .wingame,.gamestats {
+    background-color: #B71427;
+    color: white;
+    font-weight: 10;
+    font-size: 28px;
+  }
+  #panel-p1,#panel-p2{
+    background-color: #00445b;
+    opacity: .9;
+  }
+  #panel-p1,#panel-p2{
+    color:lightblue;
+    font-weight: 10px;
+    font-size: 30px;
+  }
+  .panel-body {
+   word-wrap: break-word; 
+   padding-bottom: 80px;
+  }
+  
+  .game-window{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+  }
+  .game-options{
+    padding-bottom: 10px;
+  }
+  
+  /** footer **/
+  .footer {
+    margin-top: 50px;
+    background-color:  #B71427;
+    color: white;
+    font-size: 1.5em;
+  }
+  
