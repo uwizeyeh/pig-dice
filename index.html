@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Pig Dice</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron head">
+        <h1>Pig Dice Game</h1>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" onClick="window.location.reload()">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="#rules">Game Rules</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- initial-screen section -->
+    <div class="container initial-screen">
+      <div class="row">        
+        <div class="col-md-6">
+          <img src="images/dice.png" alt="2 players" class="img-responsive center-block"/>
+          <button type="button" class="btn btn-danger btn-lg btn-block" id="twoPlayer">2 Players</button>
+        </div>      
+        <div class="col-md-6">
+          <img src="images/dice.png" alt="1 player" class="img-responsive center-block"/>
+          <button type="button" class="btn btn-danger btn-lg btn-block" id="onePlayer">1 Player</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- player(s) registration section-->
+    <div class="container players-reg"> 
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <form id="form_players">
+            <div class="form-group">
+              <input type="text" id="player_one" placeholder="player one name" class="form-control">
+            </div>
+            <div class="form-group playerTwo">
+              <input type="text" id="player_two"  placeholder="player two name"class="form-control">
+            </div>
+            <div class="radio player1-level">
+              <label>
+                <input class="radio-inline" checked="checked" type="radio" name="level" value="recruit">
+              Recruit</label>
+              <label>
+                <input class="radio-inline" type="radio" name="level" value="veteran">
+              Veteran</label> 
+            </div>
+            <div class="form-group winscore">
+              <input type="number" placeholder="Win score" id="winscore" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Game On!</button>
+          </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+
+    </div>
+
+    <!-- game section-->
+    <div class="container game-section"> 
+      <div class="wingame alert alert-success alert-dismissible">
+      </div>
+      <div class="panel panel-success gamestats">
+      </div>
+      <div class="row game-options">
+        <div class="col-md-6 restartgame">
+          <button type='button' class='btn btn-danger btn-lg btn-block' id='restartgame'>Restart Game</button>
+        </div>      
+        <div class="col-md-6 newgame">
+          <button type='button' onClick="window.location.reload()" class='btn btn-danger btn-lg btn-block' id='homescreen'>Home Screen</button>
+        </div>
+      </div>
+
+      <div class="row game-window">
+        <div class="col-md-6">
+          <div class="panel panel-default" id="panel-p1"> 
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1><span class="player1name"></span></h1>
+                  <button type="button" id="p1roll" class="btn btn-danger">Roll</button>
+                  <button type="button" id="p1hold"class="btn btn-danger">Hold</button>
+                  <div class="playerinfo">
+                    <h4 class="" id="player-1-roll"></h4>
+                    <h4 class="" id="player-1-session"></h4>
+                    <h3 class="" id="player-1-score"></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h2>Rolls</h2>
+                  <ul class="rolledNum1"></ul>
+                </div>
+              </div>
+
+              </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="panel panel-default panel-disable" id="panel-p2"> 
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1><span class="player2name"></span></h1>
+                  <button type="button" id="p2roll" class="btn btn-danger">Roll</button>
+                  <button type="button" id="p2hold"class="btn btn-danger">Hold</button>
+                  <div class="playerinfo">
+                    <h4 class="" id="player-2-roll"></h4>
+                    <h4 class="" id="player-2-session"></h4>
+                    <h3 class="" id="player-2-score"></h3>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h2>Rolls</h2>
+                  <ul class="rolledNum2"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="container">
+        <div class="jumbotron footer" id="rules">
+          <h2>Rules</h2>
+            <ul class="rules">
+              <li>If you roll a 1, you score nothing and it becomes the next player's turn.</li>
+              <li>If you roll any other number, it is added to your turn total and your turn continues.</li>
+              <li>If you choose to "hold", your turn total is added to your score, and it becomes the next player's turn.</li>
+             <li> The first player to score 100 or more points wins.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
