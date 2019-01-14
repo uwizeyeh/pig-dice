@@ -131,3 +131,6 @@ button#playButton {
 .disableGamingArea {
     opacity: 0.3;
 }
+body{
+    background-color: gray;
+}
