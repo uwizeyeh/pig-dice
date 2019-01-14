@@ -7,7 +7,7 @@
     padding: 0px;
     background-image: url(images/Harvest-Dice-Crops.jpg);
     background-size: cover;
-        color: #001f75;
+        color:black;
 }
 h1,h3,h4,button{
 font-family: 'Bungee Shade', cursive;
@@ -40,7 +40,7 @@ p,label,li{
 }
 #header img {
     width: 300px;
-    height: 150px;
+    height: 300px;
     padding-right: 30px;
 }
 #header h1 {
@@ -115,7 +115,7 @@ button#playButton {
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: center;
-    color: green;
+    color:whitesmoke;
 }
 #gamingArea img{
     border: 5px solid #001f75;
