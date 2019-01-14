@@ -1,6 +1,6 @@
 # Pig Dice Game
 ## Author
-### UWIZEYIMANA Hulde
+UWIZEYIMANA Hulde
 ### contact
 * Email:uwizeyimanahulde1@gmail.com
 * 0782356570
