@@ -1,10 +1,11 @@
-*Styles for the whole body*/
+/*Styles for the whole body*/
 .container {
     font-size: 20px;
     box-sizing: border-box;
-    width: 100%;
+    width: 180px;
+    height: 150px;
     padding: 0px;
-    background-image: url(images/bk.jpg);
+    background-image: url(images/Harvest-Dice-Crops.jpg);
     background-size: cover;
         color: #001f75;
 }
