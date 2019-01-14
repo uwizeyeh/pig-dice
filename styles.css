@@ -63,7 +63,7 @@ p,label,li{
     margin: 0px;
 }
 #rulesHeader:hover {
-    color: white;
+    color: rgb(80, 7, 7);
 }
 #rules{
     border-bottom: 1px solid black;
@@ -78,7 +78,7 @@ p,label,li{
     font-weight: bolder;
 }
 .newGame:hover {
-    color: white;
+    color: rgb(68, 10, 10);
 }
 #playingForm {
     background-color: rgba(238, 238, 238, 0.4);
